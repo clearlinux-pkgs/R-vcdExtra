@@ -4,45 +4,44 @@
 #
 Name     : R-vcdExtra
 Version  : 0.7.1
-Release  : 10
+Release  : 11
 URL      : https://cran.r-project.org/src/contrib/vcdExtra_0.7-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/vcdExtra_0.7-1.tar.gz
 Summary  : 'vcd' Extensions and Additions
 Group    : Development/Tools
 License  : GPL-2.0+
-Requires: R-Fahrmeir
-Requires: R-Hmisc
-Requires: R-Sleuth2
-Requires: R-VGAM
-Requires: R-alr3
-Requires: R-ca
-Requires: R-coin
-Requires: R-ggplot2
-Requires: R-gmodels
-Requires: R-gnm
-Requires: R-gtable
-Requires: R-lazyeval
-Requires: R-munsell
-Requires: R-plyr
-Requires: R-rgl
-Requires: R-scales
-Requires: R-vcd
+Requires: R-Rcpp
+Requires: R-gdata
+Requires: R-gtools
+Requires: R-labeling
+Requires: R-lmtest
+Requires: R-qvcalc
+Requires: R-relimp
+Requires: R-tibble
 BuildRequires : R-Fahrmeir
 BuildRequires : R-Hmisc
+BuildRequires : R-Rcpp
 BuildRequires : R-Sleuth2
 BuildRequires : R-VGAM
 BuildRequires : R-alr3
 BuildRequires : R-ca
 BuildRequires : R-coin
+BuildRequires : R-gdata
 BuildRequires : R-ggplot2
 BuildRequires : R-gmodels
 BuildRequires : R-gnm
 BuildRequires : R-gtable
+BuildRequires : R-gtools
+BuildRequires : R-labeling
 BuildRequires : R-lazyeval
+BuildRequires : R-lmtest
 BuildRequires : R-munsell
 BuildRequires : R-plyr
+BuildRequires : R-qvcalc
+BuildRequires : R-relimp
 BuildRequires : R-rgl
 BuildRequires : R-scales
+BuildRequires : R-tibble
 BuildRequires : R-vcd
 BuildRequires : buildreq-R
 
@@ -59,10 +58,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552840576
+export SOURCE_DATE_EPOCH=1552922767
 
 %install
-export SOURCE_DATE_EPOCH=1552840576
+export SOURCE_DATE_EPOCH=1552922767
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
