@@ -4,20 +4,12 @@
 #
 Name     : R-vcdExtra
 Version  : 0.7.1
-Release  : 13
+Release  : 14
 URL      : https://cran.r-project.org/src/contrib/vcdExtra_0.7-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/vcdExtra_0.7-1.tar.gz
 Summary  : 'vcd' Extensions and Additions
 Group    : Development/Tools
 License  : GPL-2.0+
-Requires: R-Rcpp
-Requires: R-gdata
-Requires: R-gtools
-Requires: R-labeling
-Requires: R-lmtest
-Requires: R-qvcalc
-Requires: R-relimp
-Requires: R-tibble
 BuildRequires : R-Fahrmeir
 BuildRequires : R-Hmisc
 BuildRequires : R-Rcpp
@@ -58,10 +50,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552922767
+export SOURCE_DATE_EPOCH=1556470243
 
 %install
-export SOURCE_DATE_EPOCH=1552922767
+export SOURCE_DATE_EPOCH=1556470243
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -97,7 +89,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc  vcdExtra || :
+R CMD check --no-manual --no-examples --no-codoc vcdExtra || :
 
 
 %files
