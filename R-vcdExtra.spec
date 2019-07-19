@@ -4,43 +4,48 @@
 #
 Name     : R-vcdExtra
 Version  : 0.7.1
-Release  : 18
+Release  : 19
 URL      : https://cran.r-project.org/src/contrib/vcdExtra_0.7-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/vcdExtra_0.7-1.tar.gz
 Summary  : 'vcd' Extensions and Additions
 Group    : Development/Tools
 License  : GPL-2.0+
+Requires: R-Fahrmeir
+Requires: R-Hmisc
+Requires: R-Sleuth2
+Requires: R-VGAM
+Requires: R-alr3
+Requires: R-ca
+Requires: R-coin
+Requires: R-gdata
+Requires: R-gmodels
+Requires: R-gnm
+Requires: R-gtools
+Requires: R-qvcalc
+Requires: R-relimp
+Requires: R-vcd
 BuildRequires : R-Fahrmeir
 BuildRequires : R-Hmisc
-BuildRequires : R-Rcpp
 BuildRequires : R-Sleuth2
 BuildRequires : R-VGAM
 BuildRequires : R-alr3
 BuildRequires : R-ca
 BuildRequires : R-coin
 BuildRequires : R-gdata
-BuildRequires : R-ggplot2
 BuildRequires : R-gmodels
 BuildRequires : R-gnm
-BuildRequires : R-gtable
 BuildRequires : R-gtools
-BuildRequires : R-labeling
-BuildRequires : R-lazyeval
-BuildRequires : R-lmtest
-BuildRequires : R-munsell
-BuildRequires : R-plyr
 BuildRequires : R-qvcalc
 BuildRequires : R-relimp
-BuildRequires : R-rgl
-BuildRequires : R-scales
-BuildRequires : R-tibble
 BuildRequires : R-vcd
 BuildRequires : buildreq-R
 
 %description
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/vcdExtra)](https://cran.r-project.org/package=vcdExtra)
-[![](http://cranlogs.r-pkg.org/badges/grand-total/vcdExtra)](https://cran.r-project.org/package=vcdExtra)
-[![Rdoc](http://www.rdocumentation.org/badges/version/vcdExtra)](http://www.rdocumentation.org/packages/vcdExtra)
+and the 'gnm' package for Generalized Nonlinear Models.
+	In particular, 'vcdExtra' extends mosaic, assoc and sieve plots from 'vcd' to handle 'glm()' and 'gnm()' models and
+	adds a 3D version in 'mosaic3d'.  Additionally, methods are provided for comparing and visualizing lists of
+	'glm' and 'loglm' objects. This package is now a support package for the book, "Discrete Data Analysis with R" by
+  Michael Friendly and David Meyer.
 
 %prep
 %setup -q -c -n vcdExtra
@@ -49,13 +54,13 @@ BuildRequires : buildreq-R
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1556484383
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1563572735
 
 %install
-export SOURCE_DATE_EPOCH=1556484383
+export SOURCE_DATE_EPOCH=1563572735
 rm -rf %{buildroot}
-export LANG=C
+export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -84,7 +89,7 @@ R CMD INSTALL --preclean --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} 
 cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
