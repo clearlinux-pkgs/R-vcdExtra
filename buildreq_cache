@@ -1,12 +1,3 @@
 0.7.1
-R-Fahrmeir
-R-Hmisc
-R-Sleuth2
-R-VGAM
-R-alr3
-R-coin
-R-gdata
+R-ggplot2
 R-gmodels
-R-gtools
-R-qvcalc
-R-relimp

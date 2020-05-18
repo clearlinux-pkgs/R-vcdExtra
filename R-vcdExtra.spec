@@ -4,39 +4,21 @@
 #
 Name     : R-vcdExtra
 Version  : 0.7.1
-Release  : 21
+Release  : 22
 URL      : https://cran.r-project.org/src/contrib/vcdExtra_0.7-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/vcdExtra_0.7-1.tar.gz
 Summary  : 'vcd' Extensions and Additions
 Group    : Development/Tools
 License  : GPL-2.0+
-Requires: R-Fahrmeir
-Requires: R-Hmisc
-Requires: R-Sleuth2
-Requires: R-VGAM
-Requires: R-alr3
 Requires: R-ca
-Requires: R-coin
-Requires: R-gdata
+Requires: R-ggplot2
 Requires: R-gmodels
 Requires: R-gnm
-Requires: R-gtools
-Requires: R-qvcalc
-Requires: R-relimp
 Requires: R-vcd
-BuildRequires : R-Fahrmeir
-BuildRequires : R-Hmisc
-BuildRequires : R-Sleuth2
-BuildRequires : R-VGAM
-BuildRequires : R-alr3
 BuildRequires : R-ca
-BuildRequires : R-coin
-BuildRequires : R-gdata
+BuildRequires : R-ggplot2
 BuildRequires : R-gmodels
 BuildRequires : R-gnm
-BuildRequires : R-gtools
-BuildRequires : R-qvcalc
-BuildRequires : R-relimp
 BuildRequires : R-vcd
 BuildRequires : buildreq-R
 
@@ -49,21 +31,22 @@ and the 'gnm' package for Generalized Nonlinear Models.
 
 %prep
 %setup -q -c -n vcdExtra
+cd %{_builddir}/vcdExtra
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1563572735
+export SOURCE_DATE_EPOCH=1589784324
 
 %install
-export SOURCE_DATE_EPOCH=1563572735
+export SOURCE_DATE_EPOCH=1589784324
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
