@@ -4,7 +4,7 @@
 #
 Name     : R-vcdExtra
 Version  : 0.7.5
-Release  : 31
+Release  : 32
 URL      : https://cran.r-project.org/src/contrib/vcdExtra_0.7-5.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/vcdExtra_0.7-5.tar.gz
 Summary  : 'vcd' Extensions and Additions
