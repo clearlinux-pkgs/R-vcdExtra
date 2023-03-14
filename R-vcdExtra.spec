@@ -4,7 +4,7 @@
 #
 Name     : R-vcdExtra
 Version  : 0.8.3
-Release  : 45
+Release  : 46
 URL      : https://cran.r-project.org/src/contrib/vcdExtra_0.8-3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/vcdExtra_0.8-3.tar.gz
 Summary  : 'vcd' Extensions and Additions
@@ -31,9 +31,6 @@ BuildRequires : R-stringr
 BuildRequires : R-tidyr
 BuildRequires : R-vcd
 BuildRequires : buildreq-R
-# Suppress stripping binaries
-%define __strip /bin/true
-%define debug_package %{nil}
 
 %description
 and the 'gnm' package for Generalized Nonlinear Models.
@@ -51,10 +48,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1677980328
+export SOURCE_DATE_EPOCH=1678827115
 
 %install
-export SOURCE_DATE_EPOCH=1677980328
+export SOURCE_DATE_EPOCH=1678827115
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
